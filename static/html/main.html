@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Group Chat Form</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.7/signalr.js"></script>
+    <link rel="stylesheet" href="/StaticFiles/css/main.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Join a Group</h2>
+        <form class="group-form" method="post" action="/">
+            <label for="username">User Name</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="group">Group Name</label>
+            <input  type="text" id="group" name="group" required>
+
+            <button id="button-group" type="submit">Join Group</button>
+        </form>
+
+        <div class="chat-section">
+            <h3>Group Chat</h3>
+            <div class="chat-box" id="chatBox">
+                <!-- Messages will appear here -->
+            </div>
+            <div class="message-form">
+                <input type="text" placeholder="Type a message..." id="messageInput" required>
+                <button type="button" id="button-send">Send</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/StaticFiles/js/main.js" ></script>
+</html>
