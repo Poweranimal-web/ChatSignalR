@@ -24,12 +24,7 @@ builder.Services.AddDbContext<ChatDbContext>(options =>
 
 var app = builder.Build();
 
-app.UseStaticFiles(new StaticFileOptions
-{
-    FileProvider = new PhysicalFileProvider(
-           Path.Combine(builder.Environment.ContentRootPath, "static")),
-    RequestPath = "/StaticFiles"
-});
+app.UseStaticFiles();
 app.MapGet("/", async (context) => {
     await context.Response.SendFileAsync("static/html/main.html");
 });
