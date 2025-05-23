@@ -26,7 +26,7 @@ var app = builder.Build();
 
 app.UseStaticFiles();
 app.MapGet("/", async (context) => {
-    await context.Response.SendFileAsync("static/html/main.html");
+    await context.Response.SendFileAsync("wwwroot/html/main.html");
 });
 app.UseCors();
 app.MapHub<ChatHub>("/chathub");
